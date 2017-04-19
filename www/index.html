@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!--    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com http://griffis.edumedia.ca  'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content: griffis.edumedia.ca  placeholdit.imgix.net placehold.it ;" />-->buttons
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="css/ratchet.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <title>ReviewR</title>
+</head>
+
+<body>
+    <header class="bar bar-nav"> <a id="btnAdd" class="btn btn-link btn-nav pull-right" href="#addReviewModal">
+                Add Review
+                <span class="icon icon-compose"></span>
+            </a>
+        <h1 class="title">ReviewR</h1> </header>
+    
+    
+    
+    <div id="page-reviews" class="content">
+        <ul class="table-view" id="review-list">
+        </ul>
+    </div>
+    
+    
+    
+    <div id="addReviewModal" class="modal">
+        <header class="bar bar-nav">
+            <a id="crossBtnOfAddReviewModal" class="icon icon-close pull-right"></a>
+            <h1 class="title">Add Review</h1> </header>
+        <div class="content">
+            <div id="addModalContent" class="content-padded">
+                <form id="id-form" class="input-group">
+                    <div class="input-row">
+                        <label>Item:</label>
+                        <input id="item" type="text" placeholder="Item name" /> </div>
+                </form>
+                <div class="rating">
+                    <label>Rating: </label> <span class="star">&nbsp;</span> <span class="star">&nbsp;</span> <span class="star">&nbsp;</span> <span class="star">&nbsp;</span> <span class="star">&nbsp;</span> </div>
+                
+                <p id="buttons" class="content-padded">
+                    
+                    <button id="CancelBtnOfAddReviewModal" class="btn btn-block"> <span class="icon icon-close"></span> Cancel</button>
+                    
+                    <button id="SaveBtnOfAddReviewModal" class="btn btn-primary btn-block"> <span class="icon icon-check"></span> Save</button>
+                </p>     
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <div id="ReviewDetailModal" class="modal">
+        <header class="bar bar-nav"> <a id="crossBtnOfDetailReviewModal" class="icon icon-left pull-left" href="#ReviewDetailModal">Back</a>
+            <h1 class="title">Review details</h1> </header>
+        <div class="content">
+            <div class="content-padded">
+                <ul id="review-detail-list" class="table-view">
+                    <li class="table-view-cell">
+                        <div> <span class="star1">&#x2606; &nbsp;</span> <span class="star1">&#x2606; &nbsp;</span> <span class="star1">&#x2606; &nbsp;</span> <span class="star1">&#x2606; &nbsp;</span> <span class="star1">&#x2606; &nbsp;</span> </div>
+                    </li>
+                </ul>
+                <p class="content-padded">
+                    <button id="DeleteBtnOfDetailReviewModal" class="btn btn-negative btn-block"> <span class="icon icon-close"></span> Delete</button>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <script type="text/javascript" src="cordova.js"></script>
+    <!-- include the compiled Ratchet JS -->
+    <script src="js/ratchet.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
